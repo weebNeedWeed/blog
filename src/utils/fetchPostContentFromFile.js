@@ -1,6 +1,9 @@
+import { getRepoName } from "./getRepoName";
+
 export const fetchPostContentFromFile = async (fileName) => {
   try {
-    const response = await fetch(`posts-in-html/${fileName}`);
+    const repoName = getRepoName() ? `/${repoName}` : "";
+    const response = await fetch(`${repoName}/posts-in-html/${fileName}`);
     if (!response.ok) {
       throw new Error(`Failed to fetch post content: ${response.statusText}`);
     }

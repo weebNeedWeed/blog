@@ -6,7 +6,7 @@ const posts = [
     excerpt:
       "Welcome to my personal blog! Here I'll share my thoughts and experiences.",
     readingTime: "4 min read",
-    contentFilePath: "post1.html",
+    contentFilePath: "welcome.html",
   },
 ];
 
