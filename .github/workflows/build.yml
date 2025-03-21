@@ -30,7 +30,7 @@ jobs:
         run: |
           npm install -g pnpm
           pnpm install
-          pnpm build -- base=/$REPO_NAME/
+          pnpm build -- --base=/$REPO_NAME/
 
       - name: Create 404.html
         run: cp dist/index.html dist/404.html
