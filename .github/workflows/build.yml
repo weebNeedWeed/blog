@@ -15,25 +15,22 @@ jobs:
         with:
           node-version: 22
 
-      - name: Get Repo Name
-        run: |
-          echo "REPO_NAME=$(echo ${GITHUB_REPOSITORY} | cut -f 2 -d '/')" >> $GITHUB_ENV
+      # - name: Get Repo Name
+      #   run: |
+      #     echo "REPO_NAME=$(echo ${GITHUB_REPOSITORY} | cut -f 2 -d '/')" >> $GITHUB_ENV
 
-      - name: Check Repo Name
-        run: |
-          echo "Repo Name: $REPO_NAME"
+      # - name: Check Repo Name
+      #   run: |
+      #     echo "Repo Name: $REPO_NAME"
 
-      - name: Create .env file
-        run: touch .env && echo "VITE_REPO_NAME=$REPO_NAME" >> .env
+      # - name: Create .env file
+      #   run: touch .env && echo "VITE_REPO_NAME=$REPO_NAME" >> .env
 
       - name: Install Dependencies & Build
         run: |
           npm install -g pnpm
           pnpm install
-          pnpm build --base=/$REPO_NAME/
-
-      # - name: Change Base
-      #   run: sed -i "s/assets/$REPO_NAME\/assets/g" ./dist/index.html
+          pnpm build
 
       - name: Create 404.html
         run: cp ./dist/index.html ./dist/404.html
