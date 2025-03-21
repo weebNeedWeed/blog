@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF3D00;
+  --color-secondary: #00E5FF;
+  --color-accent: #FFFF00;
+  --color-brutalism-bg: #F5F5F5;
+  --color-neon-pink: #FF00FF;
+  --color-acid-green: #CCFF00;
+}
+
+/* System Fonts */
+@layer base {
+  html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* Set font families based on Tailwind config */
+  .font-heading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-mono {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* Add prose styling for article content */
+  .prose h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #000;
+    padding-bottom: 0.5rem;
+  }
+  
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  .prose ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: square;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border: 2px solid #000;
+  }
+  
+  .prose pre {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    border: 3px solid #000;
+  }
+}
