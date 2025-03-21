@@ -27,3 +27,5 @@ VITE_REPO_NAME=your-repo-name
 [react-router-not-working-with-github-pages](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages)
 
 When deploying a React application with React Router to GitHub Pages, you might encounter routing issues where refreshing pages or directly accessing URLs results in 404 errors. This happens because GitHub Pages doesn't support client-side routing by default.
+
+Don't forget to update the /blog/posts-in-html/ string in fetchPostContentFromFile to match the actual repo name.
