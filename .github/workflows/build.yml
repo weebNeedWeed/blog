@@ -16,10 +16,12 @@ jobs:
           node-version: 22
 
       - name: Get Repo Name
-        run: echo "REPO_NAME=$(cut -f 2 -d '/'${GITHUB_REPOSITORY})" >> $GITHUB_ENV
+        run: |
+          echo "REPO_NAME=$(cut -f 2 -d '/'${GITHUB_REPOSITORY})" >> $GITHUB_ENV
+          echo "REPO_NAME=$REPO_NAME"
 
       - name: Create .env file
-        run: touch .env && echo "VITE_REPO_NAME=$REPO_NAME"
+        run: touch .env && echo "VITE_REPO_NAME=$REPO_NAME" >> .env
 
       - name: Install Dependencies & Build
         run: |
