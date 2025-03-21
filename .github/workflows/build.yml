@@ -30,10 +30,10 @@ jobs:
         run: |
           npm install -g pnpm
           pnpm install
-          pnpm build
+          pnpm build -- base=/$REPO_NAME/
 
       - name: Create 404.html
-        run: touch dist/404.html
+        run: cp dist/index.html dist/404.html
 
       # Configure GitHub Pages
       - name: Setup Pages
