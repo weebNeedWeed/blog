@@ -80,12 +80,14 @@ function HomePage({
               </p>
             )}
           </div>
-          <button
-            type="submit"
-            className="font-heading text-xl font-bold border-3 border-black px-8 py-3 bg-primary text-white shadow-brutal hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-          >
-            Subscribe
-          </button>
+          <div className="self-start">
+            <button
+              type="submit"
+              className="font-heading text-xl font-bold border-3 border-black px-8 py-3 bg-primary text-white shadow-brutal hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+            >
+              Subscribe
+            </button>
+          </div>
         </form>
       </div>
 
