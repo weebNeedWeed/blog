@@ -41,6 +41,50 @@
     box-shadow: 8px 8px 0px #000;
   }
   
+  .table-of-contents .toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .table-of-contents .toc-header::after {
+    content: "⬆️";
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .table-of-contents.collapsed .toc-header::after {
+    content: "⬇️";
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .table-of-contents .toc-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .table-of-contents.collapsed .toc-content {
+    max-height: 0;
+  }
+  
   .table-of-contents h3 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-weight: 700;
@@ -137,5 +181,50 @@
     margin-bottom: 1.5rem;
     overflow-x: auto;
     border: 3px solid #000;
+  }
+  
+  /* Figure styling */
+  .prose figure {
+    margin: 2.5rem auto;
+    max-width: fit-content;
+    position: relative;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .prose figure::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-right: 2px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+    z-index: -1;
+  }
+  
+  .prose figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(10%);
+    transition: filter 0.3s ease;
+    margin: 0 auto;
+  }
+  
+  .prose figure:hover img {
+    filter: grayscale(0%);
+  }
+  
+  .prose figcaption {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    color: #333;
+    border-top: 1px solid #ddd;
+    text-align: right;
   }
 }

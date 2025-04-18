@@ -1,25 +1,29 @@
-<div class="table-of-contents">
-  <h2>Table of Contents</h2>
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#setup">Setting Up Environment</a>
-      <ul>
-        <li><a href="#setup-create-account">Creating An AI Account</a></li>
-        <li><a href="#setup-install-trae">Installing Trae</a></li>
-        <li><a href="#setup-create-project-vite">Prepare A Project With Vite</a></li>
-      </ul>
-    </li>
-    <li><a href="#vibecoding">VibeCoding the Blog</a>
-      <ul>
-        <li><a href="#vibecoding-preparing-prompts">Preparing Prompts with Claude</a></li>
-        <li><a href="#vibecoding-builder-mode">Using Trae's Builder Mode</a></li>
-        <li><a href="#vibecoding-testing">Testing the Application</a></li>
-        <li><a href="#vibecoding-prepare-deployment">Preparing for Deployment (GitHub Pages)</a></li>
-        <li><a href="#vibecoding-deploying">Deploying</a></li>
-      </ul>
-    </li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ul>
+<div class="table-of-contents collapsed" onclick="this.classList.toggle('collapsed')">
+  <div class="toc-header">
+    <h2>Table of Contents</h2>
+  </div>
+  <div class="toc-content">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#setup">Setting Up Environment</a>
+        <ul>
+          <li><a href="#setup-create-account">Creating An AI Account</a></li>
+          <li><a href="#setup-install-trae">Installing Trae</a></li>
+          <li><a href="#setup-create-project-vite">Prepare A Project With Vite</a></li>
+        </ul>
+      </li>
+      <li><a href="#vibecoding">VibeCoding the Blog</a>
+        <ul>
+          <li><a href="#vibecoding-preparing-prompts">Preparing Prompts with Claude</a></li>
+          <li><a href="#vibecoding-builder-mode">Using Trae's Builder Mode</a></li>
+          <li><a href="#vibecoding-testing">Testing the Application</a></li>
+          <li><a href="#vibecoding-prepare-deployment">Preparing for Deployment (GitHub Pages)</a></li>
+          <li><a href="#vibecoding-deploying">Deploying</a></li>
+        </ul>
+      </li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </div>
 </div>
 
 <h2 id="introduction">Introduction</h2>
@@ -34,8 +38,16 @@
 
 <p>So, firstly, let's make the definitions clear. <strong>What is Vide Coding?</strong> An OpenAI cofounder,
   <strong>Andrej Karpathy</strong>, has coined a new phrase that is about using AI to build the whole application, all
-  by AI itself. During the process
+  by AI itself. During the process of building application, you usually don't need to worry about the code, but rather
+  just know that it works. In my opinion, this characteristic is an advantage and also a disadvantage of Vide Coding.
 </p>
+
+<figure>
+  <img width="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMIQU4vCT9SYuQQl0nzeE9CSVcohNsdl29A&s"
+    alt="vibecoding meme" />
+  <figcaption>Vibe coding is fun, until you need to debug your app</figcaption>
+</figure>
+
 
 <!-- -------------------------------setup------------------------------- -->
 <h2 id="setup">Setting Up Environment</h2>
