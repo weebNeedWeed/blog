@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-primary: #FF3D00;
@@ -30,6 +31,63 @@
     font-family: "Courier New", Courier, monospace;
   }
   
+  /* Table of Contents Styling */
+  .table-of-contents {
+    background-color: var(--color-brutalism-bg);
+    border: 4px solid #000;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 8px 8px 0px #000;
+  }
+  
+  .table-of-contents h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+  }
+  
+  .table-of-contents ul {
+    padding-left: 1.25rem;
+    list-style-type: none;
+  }
+  
+  .table-of-contents ul ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .table-of-contents li {
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  
+  .table-of-contents li::before {
+    content: "→";
+    position: absolute;
+    left: -1.25rem;
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+  
+  .table-of-contents a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-secondary);
+    transition: background-color 0.2s;
+    padding: 0.1rem 0.3rem;
+  }
+  
+  .table-of-contents a:hover {
+    background-color: var(--color-secondary);
+    color: #000;
+  }
+  
   /* Add prose styling for article content */
   .prose h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -39,6 +97,16 @@
     margin-bottom: 1rem;
     border-bottom: 3px solid #000;
     padding-bottom: 0.5rem;
+  }
+  
+  .prose h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--color-secondary);
+    padding-left: 0.75rem;
   }
   
   .prose p {
